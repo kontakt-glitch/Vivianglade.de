@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://vivianglade.de/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vivianglade.de/">
+<meta property="og:title" content="Vivian Glade – Musik. Visuelle Geschichten. Denken mit dem Stift.">
+<meta property="og:description" content="Chorleitung und Komposition, Graphic Recording und visuelle Moderation aus Bremerhaven. Projekte direkt anfragen.">
+<meta property="og:image" content="https://vivianglade.de/img/einfach-klar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Vivian Glade – Musik, Graphic Recording &amp; Denken mit dem Stift | Bremerhaven</title>
+<meta name="description" content="Vivian Glade, Bremerhaven: Musik und musikalische Leitung, Graphic Recording und visuelle Geschichten, Denken mit dem Stift. Projekte direkt anfragen.">
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-weight:200 800;font-style:normal;font-display:swap;src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"Shantell Sans";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/shantell-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Shantell Sans";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/shantell-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/instrument-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/instrument-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/instrument-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/instrument-sans-latin-700-normal.woff2) format("woff2")}
+/* Layout: Atelierwand – große Zusage mit Marker-Strichen, Porträt im Aquarellfleck, angepinnte Arbeiten; drei Bereiche als Kapitel mit eigener Farbe; filterbare Wand mit Großansicht; Anfrage immer erreichbar */
+:root{
+  --paper:#F7F7F4; --sheet:#FFFFFF; --ink:#141317; --ink-soft:#55565E; --grey:#DFE1E5; --grey-2:#ECEDF0;
+  --sun:#F6BE1A; --sun-wash:#FFE9A8; --lav:#B9A4EE; --lav-wash:#ECE5FB; --sky:#8CC4EE; --sky-wash:#E1EFFA;
+  --on-sun:#141317;
+  --display:"Bricolage Grotesque","Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;
+  --hand:"Shantell Sans","Segoe Print","Comic Sans MS",cursive;
+  --text:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121115; --sheet:#1C1B21; --ink:#F3F2F6; --ink-soft:#B4B5BF; --grey:#33333B; --grey-2:#25252C;
+  --sun:#F6BE1A; --sun-wash:#3A3018; --lav:#B9A4EE; --lav-wash:#2A2440; --sky:#8CC4EE; --sky-wash:#1A2A38; --on-sun:#141317; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121115; --sheet:#1C1B21; --ink:#F3F2F6; --ink-soft:#B4B5BF; --grey:#33333B; --grey-2:#25252C;
+  --sun:#F6BE1A; --sun-wash:#3A3018; --lav:#B9A4EE; --lav-wash:#2A2440; --sky:#8CC4EE; --sky-wash:#1A2A38; --on-sun:#141317; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.55;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1;text-wrap:balance;letter-spacing:-.02em}
+h2{font-size:clamp(36px,5.4vw,64px);font-weight:800}
+h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.hand{font-family:var(--hand)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Top */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--grey)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--paper)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+.logo i{font-style:normal;display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--sun);margin-left:3px}
+.nav{display:flex;align-items:center;gap:22px;font-weight:600;font-size:15px}
+.nav a:not(.btn){text-decoration:none;position:relative}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;border-radius:2px;background:var(--sun);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:not(.btn):hover::after{transform:scaleX(1)}
+@media (max-width:940px){.nav a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border:2px solid var(--ink);border-radius:999px;font:700 17px var(--text);text-decoration:none;cursor:pointer;background:var(--sheet);color:var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--ink)}
+.btn.primary{background:var(--sun);color:var(--on-sun);border-color:var(--sun)}
+.btn.primary:hover{box-shadow:0 4px 0 var(--ink)}
+.btn.small{min-height:44px;padding:0 18px;font-size:15px}
+.btn svg{width:20px;height:20px;flex:none}
+.dock{display:none}
+@media (max-width:760px){
+  .dock{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:8px;background:var(--paper);border-top:1.5px solid var(--grey);
+    padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .dock .btn{flex:1;min-height:48px}
+  body{padding-bottom:78px}
+  .top .btn{display:none}
+}
+
+/* Hero */
+.hero{overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding-block:56px 40px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-block:30px 20px;gap:28px}}
+.hero .name{font-family:var(--hand);font-size:22px;font-weight:700;display:flex;align-items:center;gap:10px}
+.hero .name svg{width:46px;height:20px;color:var(--ink-soft)}
+.hero h1{font-size:clamp(40px,5.6vw,80px);font-weight:800;margin:18px 0 22px;line-height:.96}
+.hero h1 span{display:inline;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .04em;background-repeat:no-repeat;background-position:0 96%;background-size:100% .2em;animation:mark .9s cubic-bezier(.6,0,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.2s}.hero h1 span:nth-child(3){animation-delay:.4s}
+@keyframes mark{from{background-size:0 .2em}}
+.m-lav{background-image:linear-gradient(var(--lav),var(--lav))}.m-sun{background-image:linear-gradient(var(--sun),var(--sun))}.m-sky{background-image:linear-gradient(var(--sky),var(--sky))}
+.hero h1{isolation:isolate}
+.lead{font-size:clamp(19px,1.8vw,22px);max-width:38ch;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stage{position:relative;aspect-ratio:1/1.02;width:min(100%,520px);justify-self:center}
+.blob{position:absolute;inset:8% 6% 2% 10%;border-radius:46% 54% 42% 58%/52% 44% 56% 48%;background:radial-gradient(circle at 35% 35%,var(--lav-wash),transparent 70%),radial-gradient(circle at 70% 65%,var(--sun-wash),transparent 65%),var(--sky-wash);filter:blur(.5px)}
+.stage .me{position:absolute;left:12%;bottom:0;width:66%;height:auto;z-index:2}
+.pin{position:absolute;z-index:3;background:var(--sheet);padding:6px 6px 22px;box-shadow:0 8px 24px rgba(0,0,0,.14);border-radius:3px;transition:transform .25s}
+.pin img{display:block;width:100%;height:auto}
+.pin b{position:absolute;left:8px;bottom:3px;font:500 12px var(--hand);color:#555}
+.pin::before{content:"";position:absolute;top:-7px;left:50%;width:44px;height:16px;margin-left:-22px;background:var(--sun);opacity:.85;transform:rotate(-3deg)}
+.pin.a{width:34%;right:-2%;top:2%;transform:rotate(5deg)}
+.pin.b{width:30%;left:-4%;top:14%;transform:rotate(-6deg)}
+.pin.c{width:30%;right:2%;bottom:6%;transform:rotate(-3deg)}
+.pin:hover{transform:rotate(0) scale(1.04)}
+.note{position:absolute;z-index:4;left:44%;top:-2%;font:700 17px/1.15 var(--hand);transform:rotate(-4deg);max-width:150px}
+@media (max-width:480px){.note{display:none}}
+
+/* Fields */
+.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-block:8px 6px}
+@media (max-width:900px){.fields{grid-template-columns:1fr}}
+.field{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;text-decoration:none;border-radius:18px;padding:16px 18px;background:var(--sheet);border:1.5px solid var(--grey);transition:transform .15s,border-color .15s}
+.field:hover{transform:translateY(-3px);border-color:var(--ink)}
+.field .dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:var(--on-sun)}
+.field .dot svg{width:26px;height:26px}
+.field b{font-family:var(--display);font-size:20px;line-height:1.1;display:block;letter-spacing:-.01em}
+.field span{font-size:14px;color:var(--ink-soft)}
+.field .go{font-size:22px}
+.f-m .dot{background:var(--lav)}.f-v .dot{background:var(--sun)}.f-t .dot{background:var(--sky)}
+
+/* Proof strip */
+.proof{display:flex;flex-wrap:wrap;gap:8px 26px;padding-block:22px 8px;color:var(--ink-soft);font-size:15px;border-top:1.5px dashed var(--grey);margin-top:22px}
+.proof b{color:var(--ink);font-family:var(--display);font-size:17px}
+
+section{padding-block:72px}
+@media (max-width:640px){section{padding-block:48px}}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:end;margin-bottom:34px}
+@media (max-width:860px){.chap-head{grid-template-columns:1fr;gap:14px}}
+.chap-head .num{font:700 15px var(--hand);display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
+.chap-head .num i{display:inline-block;width:28px;height:28px;border-radius:50%}
+.chap-head p{font-size:19px;color:var(--ink-soft);max-width:52ch}
+.c-m .num i{background:var(--lav)}.c-v .num i{background:var(--sun)}.c-t .num i{background:var(--sky)}
+.c-m{background:linear-gradient(var(--lav-wash),var(--paper) 70%)}
+.c-v{background:linear-gradient(var(--sun-wash),var(--paper) 60%)}
+.c-t{background:linear-gradient(var(--sky-wash),var(--paper) 70%)}
+
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:860px){.grid2{grid-template-columns:1fr;gap:24px}}
+.svc{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.svc li{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:14px 0;border-bottom:1.5px solid var(--grey)}
+.svc b{font-family:var(--display);font-size:20px;letter-spacing:-.01em}
+.svc span{color:var(--ink-soft);font-size:16px}
+.stack{display:grid;gap:18px;min-width:0}
+
+/* Music photos */
+.mosaic{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto;gap:12px}
+.mosaic figure{margin:0;position:relative;border-radius:14px;overflow:hidden;background:var(--grey-2)}
+.mosaic img{display:block;width:100%;height:100%;object-fit:cover}
+.mosaic .tall{grid-row:span 2}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:var(--sheet);color:var(--ink);font:600 13px var(--text);padding:3px 10px;border-radius:999px}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:16px}
+.facts li{padding-left:16px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--lav)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+
+/* Feature */
+.feature{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:center;background:var(--sheet);border-radius:24px;padding:22px;border:1.5px solid var(--grey)}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+.feature img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in}
+.feature dl{margin:0;display:grid;gap:14px}
+.feature dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.feature dd{margin:2px 0 0;font-size:18px}
+.feature h3{font-size:clamp(26px,3vw,36px);margin-bottom:6px}
+
+.outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.outcomes{grid-template-columns:1fr}}
+.outcomes div{background:var(--sheet);border-radius:18px;padding:20px;border:1.5px solid var(--grey);display:grid;gap:8px}
+.outcomes svg{width:40px;height:40px}
+.formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.formats{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.formats{grid-template-columns:1fr}}
+.formats div{border:1.5px dashed var(--ink-soft);border-radius:16px;padding:14px 16px}
+.formats b{display:block;font-family:var(--display);font-size:19px}
+.formats span{font-size:15px;color:var(--ink-soft)}
+
+/* Wall */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;font:600 15px var(--text);cursor:pointer;min-height:42px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.wall{columns:4 240px;column-gap:14px}
+.work{break-inside:avoid;margin:0 0 14px;display:block;width:100%;padding:0;border:0;background:var(--sheet);border-radius:14px;overflow:hidden;cursor:zoom-in;text-align:left;font:inherit;color:inherit;box-shadow:0 1px 0 var(--grey);transition:transform .2s}
+.work:hover{transform:translateY(-3px)}
+.work img{display:block;width:100%;height:auto}
+.work .cap{display:flex;gap:8px;align-items:baseline;padding:10px 12px;font-size:14px;color:var(--ink-soft)}
+.work .cap b{color:var(--ink);font-family:var(--display);font-size:16px;letter-spacing:-.01em}
+.work .tag{margin-left:auto;width:10px;height:10px;border-radius:50%;flex:none}
+.t-v{background:var(--sun)}.t-t{background:var(--sky)}.t-f{background:var(--lav)}
+
+/* Lightbox */
+.lb[hidden]{display:none}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(10,10,14,.92);display:grid;grid-template-rows:minmax(0,1fr) auto;padding:calc(12px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lb .view{overflow:auto;display:grid;place-items:center;min-height:0;cursor:zoom-in;touch-action:pan-x pan-y pinch-zoom}
+.lb .view img{max-width:100%;max-height:100%;object-fit:contain;transition:none}
+.lb.zoom .view{cursor:zoom-out;place-items:start}
+.lb.zoom .view img{max-width:none;max-height:none;width:200%}
+.lb .bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;color:#F3F2F6;padding-top:12px}
+.lb .bar p{flex:1;min-width:220px;font-size:15px;color:#C9C9D2}
+.lb .bar p b{color:#fff;font-family:var(--display);font-size:18px;display:block}
+.lb button{background:#F3F2F6;color:#141317;border:0;border-radius:999px;min-height:44px;min-width:44px;padding:0 14px;font:700 15px var(--text);cursor:pointer}
+
+/* At work */
+.atwork{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.atwork{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.atwork{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.atwork figure{margin:0;border-radius:14px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--grey-2)}
+.atwork img{width:100%;height:100%;object-fit:cover;display:block}
+.atwork figcaption{position:absolute;left:8px;bottom:8px;background:var(--sheet);color:var(--ink);font:600 13px var(--text);padding:3px 10px;border-radius:999px}
+
+/* About */
+.about .wrap{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:44px;align-items:center}
+@media (max-width:760px){.about .wrap{grid-template-columns:1fr}}
+.about .pic{position:relative;max-width:360px}
+.about .pic img{display:block;width:100%;height:auto;border-radius:20px}
+.about .pic .scribble{position:absolute;right:-14px;bottom:24px;font:700 18px/1.1 var(--hand);background:var(--sun);color:var(--on-sun);padding:8px 12px;border-radius:12px;transform:rotate(-4deg)}
+.about .txt{display:grid;gap:14px;max-width:60ch}
+
+/* Request */
+.req{background:var(--ink);color:var(--paper)}
+.req .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:start}
+@media (max-width:860px){.req .wrap{grid-template-columns:1fr}}
+.req .kicker{color:var(--sun)}
+.req h2{color:var(--paper)}
+.req .intro{color:color-mix(in srgb,var(--paper) 80%,transparent);font-size:19px}
+.contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;border:1.5px solid color-mix(in srgb,var(--paper) 30%,transparent);border-radius:14px;padding:12px 14px}
+.contact-row .lbl{width:100%;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.contact-row b{font-size:19px;user-select:all;word-break:break-all}
+.copy{margin-left:auto;border:1.5px solid var(--paper);background:transparent;color:var(--paper);border-radius:999px;padding:4px 12px;font:600 14px var(--text);cursor:pointer}
+form{background:var(--sheet);color:var(--ink);border-radius:24px;padding:24px;display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.opt{font-weight:400;color:var(--ink-soft)}
+input,textarea{font:inherit;font-size:17px;color:var(--ink);background:var(--paper);border:1.5px solid var(--ink-soft);border-radius:12px;padding:11px 13px;width:100%;min-width:0}
+input[aria-invalid="true"]{border-color:#C0392B;border-width:2px}
+.err{color:#C0392B;font-size:14px;font-weight:600}
+textarea{min-height:110px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+legend{font-weight:600;font-size:15px;margin-bottom:6px}
+.choices{display:grid;gap:8px}
+.choices label{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:10px;border:1.5px solid var(--grey);border-radius:14px;padding:11px 14px;font-weight:600;cursor:pointer}
+.choices input{width:auto;accent-color:var(--ink)}
+.choices i{width:14px;height:14px;border-radius:50%}
+.choices label:has(input:checked){border-color:var(--ink);background:var(--grey-2)}
+.send{display:flex;flex-wrap:wrap;gap:10px}
+.out{font-size:15px;color:var(--ink-soft)}
+.out a{font-weight:700;color:var(--ink)}
+
+footer{padding-block:34px 48px;font-size:15px;color:var(--ink-soft)}
+footer .wrap{display:grid;gap:18px}
+.more{display:flex;flex-wrap:wrap;gap:8px 22px}
+.more a{font-weight:600;color:var(--ink)}
+details{border-top:1px dashed var(--grey);padding-top:10px}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+details p{margin-top:8px;max-width:75ch}
+</style>
+
+<style>:root{padding-top:env(safe-area-inset-top,0px)}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#start">Vivian Glade<i aria-hidden="true"></i></a>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="#musik">Musik</a><a href="#visuell">Visuelle Geschichten</a><a href="#denken">Denken mit dem Stift</a><a href="#arbeiten">Arbeiten</a><a href="#ueber">Über mich</a>
+      <a class="btn primary small" href="#anfragen">Projekt anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="start">
+  <section class="hero" style="padding-block:0">
+    <div class="wrap">
+      <div>
+        <p class="name">Vivian Glade, Bremerhaven <svg viewBox="0 0 46 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 14c10-10 24-12 38-4m0 0-8-1m8 1-3 7"/></svg></p>
+        <h1>
+          <span class="m-lav">Musik.</span><br>
+          <span class="m-sun">Visuelle Geschichten.</span><br>
+          <span class="m-sky">Denken mit dem Stift.</span>
+        </h1>
+        <p class="lead">Ich mache komplexe Themen verständlich. Mit Zeichnungen, Geschichten und Musik. Für Menschen, Teams und Organisationen, die etwas bewegen, vermitteln oder gemeinsam entwickeln wollen.</p>
+        <div class="cta">
+          <a class="btn primary" href="#anfragen">Projekt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="#arbeiten">Arbeiten ansehen</a>
+        </div>
+      </div>
+      <div class="stage" aria-label="Vivian Glade mit Arbeitsproben">
+        <div class="blob" aria-hidden="true"></div>
+        <img class="me" src="img/v-portrait.png" alt="Vivian Glade, lächelnd, die Hände gefaltet" width="678" height="766">
+        <figure class="pin a" style="margin:0"><img src="img/einfach-klar.jpg" alt="Sketchnote: Einfach. Klar. Gezeichnet." width="1000" height="1305"><b>Erklärbild</b></figure>
+        <figure class="pin b" style="margin:0"><img src="img/licht.jpg" alt="Aquarell mit Lettering: Wo Schatten ist, gibt’s immer auch Licht" width="1000" height="1460"><b>Visuelle Geschichte</b></figure>
+        <figure class="pin c" style="margin:0"><img src="img/ngl.jpg" alt="Mindmap Neues geistliches Lied" width="1300" height="956"><b>Mindmap</b></figure>
+        <p class="note" aria-hidden="true">alles von Hand ↓</p>
+      </div>
+    </div>
+    <div class="wrap" style="display:block;padding-block:0">
+      <nav class="fields" aria-label="Angebotsbereiche">
+        <a class="field f-m" href="#musik"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><div><b>Musik &amp; musikalische Leitung</b><span>Chor, Band, Komposition, Livestream</span></div><span class="go" aria-hidden="true">→</span></a>
+        <a class="field f-v" href="#visuell"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21l2-4M17 21l-2-4M7 8h6M7 12c3-3 5 2 8-1"/></svg></span><div><b>Graphic Recording &amp; visuelle Geschichten</b><span>Live oder als ausgearbeitete Illustration</span></div><span class="go" aria-hidden="true">→</span></a>
+        <a class="field f-t" href="#denken"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span><div><b>Denken mit dem Stift</b><span>Workshops, visuelle Moderation, Prozesse</span></div><span class="go" aria-hidden="true">→</span></a>
+      </nav>
+      <div class="proof">
+        <span><b>Kantorin</b> im Ev.-luth. Kirchenkreis Bremerhaven</span>
+        <span><b>Chorleiterin</b> seit 1997</span>
+        <span><b>~14 Veröffentlichungen</b> 2002–2016</span>
+        <span><b>Radio Bremen · ARD · ZDF</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="musik" class="c-m">
+    <div class="wrap">
+      <div class="chap-head">
+        <div><div class="num hand"><i aria-hidden="true"></i>Bereich 1</div><h2>Musik &amp; musikalische Leitung</h2></div>
+        <p>Ich leite Chöre und Bands, schreibe Songs und Arrangements und entwickle musikalische Projekte von der Idee bis zur Aufführung, auf der Bühne und im Livestream.</p>
+      </div>
+      <div class="grid2">
+        <div class="stack">
+          <ul class="svc">
+            <li><b>Chorleitung</b><span>Projektchöre, Gospel-, Soul- und Popchöre, Kinder- und Jugendchor</span></li>
+            <li><b>Komposition &amp; Arrangements</b><span>Für Chor, Band und Kinderstimmen</span></li>
+            <li><b>Musikalische Konzeption</b><span>Konzerte, Gottesdienste, Kulturveranstaltungen</span></li>
+            <li><b>Probenarbeit &amp; Workshops</b><span>Für Chöre, Ensembles und Bands</span></li>
+            <li><b>Livestream &amp; hybride Formate</b><span>Konzept, Regie, Bild und Ton für Konzerte, Gottesdienste und Talks</span></li>
+          </ul>
+          <ul class="facts">
+            <li>Musikalische und künstlerische Leiterin der Glad(E)makers, Social Soul Choir Bremerhaven e.&nbsp;V.</li>
+            <li>Gründerin der Gospelchöre Church People (1997) und Prayers &amp; Preachers (1999–2008)</li>
+            <li>Internationale Chorpartnerschaften in Indien, Südafrika, Italien und Israel</li>
+          </ul>
+          <div class="links">
+            <a class="btn primary small" href="#anfragen" data-pick="Musikprojekt">Musikprojekt anfragen</a>
+            <a class="btn small" href="https://open.spotify.com/artist/7mWqfinQ0e3HHuiOuJjqxr" target="_blank" rel="noopener">Spotify</a>
+            <a class="btn small" href="https://music.apple.com/de/artist/vivian-glade/433009675" target="_blank" rel="noopener">Apple Music</a>
+            <a class="btn small" href="https://soundcloud.com/vivian-glade" target="_blank" rel="noopener">SoundCloud</a>
+            <a class="btn small" href="https://share.google/U98RcpzbxOcxicpxE" target="_blank" rel="noopener">Video: Das Licht in uns</a>
+          </div>
+        </div>
+        <div class="mosaic">
+          <figure class="tall"><img src="img/v-band.jpg" alt="Vivian Glade am Keyboard mit Mikrofon bei einem Konzert im Freien" loading="lazy"><figcaption>Live mit Band</figcaption></figure>
+          <figure><img src="img/v-gitarre.jpg" alt="Vivian Glade mit E-Gitarre" loading="lazy"><figcaption>Gitarre</figcaption></figure>
+          <figure><img src="img/v-stream.jpg" alt="Vivian Glade an der Regie eines Livestreams" loading="lazy"><figcaption>Livestream-Regie</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visuell" class="c-v">
+    <div class="wrap">
+      <div class="chap-head">
+        <div><div class="num hand"><i aria-hidden="true"></i>Bereich 2</div><h2>Graphic Recording &amp; visuelle Geschichten</h2></div>
+        <p>Ich übersetze Vorträge, Diskussionen und Veränderungen in Bilder, die man versteht und behält. Live auf Flipchart und Papierwand oder danach als ausgearbeitete Illustration. Ich zeichne für euch, ihr bleibt bei euren Inhalten.</p>
+      </div>
+      <div class="feature">
+        <img src="img/einfach-klar.jpg" alt="Sketchnote Einfach. Klar. Gezeichnet.: von zu komplex über visuelle Übersetzung zum Werkzeugkoffer für alle verständlich" data-lb="0" loading="lazy">
+        <div class="stack">
+          <h3>Einfach. Klar. Gezeichnet.</h3>
+          <dl>
+            <div><dt>Thema</dt><dd>Wie aus einem zu komplexen Thema ein Bild wird, das alle verstehen</dd></div>
+            <div><dt>Methode</dt><dd>Kernaussagen finden, in Symbole und Figuren übersetzen, mit Farbe ordnen</dd></div>
+            <div><dt>Ergebnis</dt><dd>Ein Blatt, das man in Sekunden liest und im Kopf behält</dd></div>
+          </dl>
+          <ul class="svc" style="margin-top:6px">
+            <li><b>Graphic Recording</b><span>Bei Tagungen, Seminaren und Workshops</span></li>
+            <li><b>Visuelle Protokolle &amp; Zusammenfassungen</b><span>Ergebnisse auf einem Blatt</span></li>
+            <li><b>Erklärbilder &amp; Graphic Storytelling</b><span>Abläufe, Konzepte, Veränderungsprozesse</span></li>
+            <li><b>Sketchnotes für Bildung und Kommunikation</b><span>Plakate, Einladungen, Lernmaterial</span></li>
+          </ul>
+          <a class="btn primary" href="#anfragen" data-pick="Graphic Recording / visuelle Geschichte" style="justify-self:start">Graphic Recording anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="denken" class="c-t">
+    <div class="wrap">
+      <div class="chap-head">
+        <div><div class="num hand"><i aria-hidden="true"></i>Bereich 3</div><h2>Denken mit dem Stift</h2></div>
+        <p>Hier geht es nicht ums schöne Zeichnen. Der Stift ist eine Methode: Sachverhalte sichtbar machen, Fragen schärfen, Perspektiven erkennen und Entscheidungen vorbereiten. Ich moderiere visuell und zeige Teams, wie sie selbst mit Bildern denken.</p>
+      </div>
+      <div class="stack" style="gap:26px">
+        <div class="outcomes">
+          <div><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="18" r="11"/><path d="M26 26l9 9"/><path d="M14 18h8M18 14v8"/></svg><h3>Klarheit</h3><p>Ihr seht, worum es wirklich geht und was noch offen ist.</p></div>
+          <div><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 11h18v12H13l-6 5v-5H5z"/><path d="M27 15h8v12h-2v5l-6-5h-8v-4"/></svg><h3>Gemeinsame Sprache</h3><p>Unterschiedliche Sichtweisen bekommen ein Bild, über das man reden kann.</p></div>
+          <div><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="30" height="20" rx="3"/><path d="M15 14v-4h10v4M5 22h30"/></svg><h3>Eigene Werkzeuge</h3><p>Alle gehen mit einfachen Bildmitteln raus, die im Alltag funktionieren.</p></div>
+        </div>
+        <div class="formats">
+          <div><b>Impuls</b><span>Kurzformat für Teamsitzung oder Fachtag</span></div>
+          <div><b>Workshop</b><span>Halber oder ganzer Tag, vor Ort oder online</span></div>
+          <div><b>Visuelle Moderation</b><span>Ich moderiere eure Sitzung oder Klausur mit dem Stift</span></div>
+          <div><b>Prozessbegleitung</b><span>Über mehrere Termine, vom Ziel bis zur Entscheidung</span></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <p style="color:var(--ink-soft)">Für Teams und Führungskräfte, Bildungseinrichtungen, Kirchen, Vereine und soziale Organisationen.</p>
+          <a class="btn primary" href="#anfragen" data-pick="Workshop „Denken mit dem Stift“">Workshop anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeiten">
+    <div class="wrap">
+      <div class="chap-head">
+        <div><div class="num hand"><i aria-hidden="true" style="background:var(--ink)"></i>Portfolio</div><h2>Arbeiten</h2></div>
+        <p>Tippe auf ein Bild für die Großansicht. Mit einem zweiten Tipp kannst du hineinzoomen und die Details lesen.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Arbeiten filtern">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">Alle</button>
+        <button class="chip" type="button" data-f="v" aria-pressed="false">Visuelle Geschichten</button>
+        <button class="chip" type="button" data-f="t" aria-pressed="false">Denken mit dem Stift</button>
+        <button class="chip" type="button" data-f="f" aria-pressed="false">Freie Arbeiten</button>
+      </div>
+      <div class="wall" id="wall"></div>
+    </div>
+  </section>
+
+  <section id="bei-der-arbeit" style="padding-top:12px">
+    <div class="wrap">
+      <div class="chap-head" style="margin-bottom:22px"><div><div class="num hand"><i aria-hidden="true" style="background:var(--sun)"></i>Bei der Arbeit</div><h2>So arbeite ich</h2></div><p>Am Klavier, an der Wand, am Aquarellkasten und am Regiepult.</p></div>
+      <div class="atwork">
+        <figure><img src="img/v-kreide.jpg" alt="Vivian Glade zeichnet mit Kreide an einer Wand" loading="lazy"><figcaption>Wandbild</figcaption></figure>
+        <figure><img src="img/v-aquarell.jpg" alt="Vivian Glade malt mit Aquarellfarben" loading="lazy"><figcaption>Aquarell</figcaption></figure>
+        <figure><img src="img/v-klavier.jpg" alt="Vivian Glade am Klavier" loading="lazy"><figcaption>Klavier</figcaption></figure>
+        <figure><img src="img/v-karte.jpg" alt="Vivian Glade hinter einer selbst gemalten Karte" loading="lazy"><figcaption>Handgemacht</figcaption></figure>
+        <figure><img src="img/v-schminke.jpg" alt="Ein Kind schminkt Vivian Glade das Gesicht" loading="lazy"><figcaption>Mittendrin</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber" class="about">
+    <div class="wrap">
+      <div class="pic"><img src="img/v-selfie.jpg" alt="Porträt von Vivian Glade" loading="lazy"><span class="scribble">Hallo, ich bin Vivi!</span></div>
+      <div class="txt">
+        <div class="kicker">Über mich</div>
+        <h2>Zuhören, verstehen, sichtbar machen.</h2>
+        <p>Ich bin Musikerin, Komponistin und Künstlerin aus Bremerhaven. Seit fast 30 Jahren arbeite ich mit Gruppen: als Kantorin und Chorleiterin, in Kursen, Kulturprojekten und Gemeinwesenarbeit.</p>
+        <p>Ich male Aquarelle, zeichne Comics, Sketchnotes und Flipcharts und schreibe Songs. Weil ich gewohnt bin, Gruppen genau zuzuhören, finde ich schnell das Bild oder den Klang, der eure Gedanken zusammenhält.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="anfragen" class="req">
+    <div class="wrap">
+      <div class="stack">
+        <div class="kicker">Vivian buchen</div>
+        <h2>Projekt anfragen</h2>
+        <p class="intro">Erzähl mir kurz, worum es geht. Du bekommst ein individuelles Angebot. Eine Anfrage ist noch keine Buchung und verpflichtet zu nichts.</p>
+        <div class="contact-row"><span class="lbl">E-Mail</span><b>kontakt@vivianglade.de</b><button class="copy" type="button" data-copy="kontakt@vivianglade.de">Kopieren</button></div>
+        <div class="contact-row"><span class="lbl">Telefon &amp; WhatsApp</span><b>+49 1522 7153259</b><button class="copy" type="button" data-copy="+49 1522 7153259">Kopieren</button></div>
+      </div>
+      <form id="anfrage" novalidate>
+        <fieldset>
+          <legend>Worum geht es?</legend>
+          <div class="choices">
+            <label><input type="radio" name="art" id="art-musik" value="Musikprojekt"><i style="background:var(--lav)"></i>Musikprojekt anfragen</label>
+            <label><input type="radio" name="art" id="art-visuell" value="Graphic Recording / visuelle Geschichte" checked><i style="background:var(--sun)"></i>Graphic Recording / visuelle Geschichte anfragen</label>
+            <label><input type="radio" name="art" id="art-denken" value="Workshop „Denken mit dem Stift“"><i style="background:var(--sky)"></i>Workshop „Denken mit dem Stift“ anfragen</label>
+          </div>
+        </fieldset>
+        <div class="row2">
+          <label for="f-name">Name<input id="f-name" name="name" type="text" autocomplete="name" aria-describedby="e-name"><span class="err" id="e-name" hidden>Bitte gib deinen Namen an.</span></label>
+          <label for="f-kontakt">E-Mail oder Telefon<input id="f-kontakt" name="kontakt" type="text" autocomplete="email" aria-describedby="e-kontakt"><span class="err" id="e-kontakt" hidden>Bitte gib an, wie ich dich erreiche.</span></label>
+        </div>
+        <label for="f-zeit">Gewünschter Zeitraum <span class="opt">(optional)</span><input id="f-zeit" name="zeit" type="text" placeholder="z. B. März 2027 oder 14.–15.03."></label>
+        <label for="f-text">Kurze Beschreibung <span class="opt">(optional)</span><textarea id="f-text" name="text" placeholder="Anlass, Ort, Gruppengröße, Thema …"></textarea></label>
+        <div class="send">
+          <button class="btn primary" type="submit" data-via="mail">Anfrage per E-Mail</button>
+          <button class="btn" type="submit" data-via="wa">Per WhatsApp</button>
+        </div>
+        <p class="out" id="out" aria-live="polite">Dein E-Mail-Programm oder WhatsApp öffnet sich mit der fertigen Nachricht. Gesendet wird erst, wenn du dort auf Senden tippst.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="dock"><a class="btn primary" href="#anfragen">Projekt anfragen</a><a class="btn" href="#arbeiten">Arbeiten</a></div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Großansicht">
+  <div class="view" id="lb-view"><img id="lb-img" alt=""></div>
+  <div class="bar"><p id="lb-cap"></p><button type="button" id="lb-prev" aria-label="Vorherige Arbeit">←</button><button type="button" id="lb-next" aria-label="Nächste Arbeit">→</button><button type="button" id="lb-close">Schließen</button></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="more"><span>Mehr von mir:</span>
+      <a href="https://glademakers.art" target="_blank" rel="noopener">GladEmakers</a>
+      <a href="https://www.instagram.com/vivian_glade" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://open.spotify.com/artist/7mWqfinQ0e3HHuiOuJjqxr" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://soundcloud.com/vivian-glade" target="_blank" rel="noopener">SoundCloud</a>
+    </div>
+    <details id="impressum"><summary>Impressum</summary>
+      <p><b>Angaben nach § 5 DDG</b><br>Vivian Glade<br>Braunstr. 22a<br>27574 Bremerhaven<br>E-Mail: kontakt@vivianglade.de<br>Telefon: +49 1522 7153259</p>
+      <p>Umsatzsteuer: Kleinunternehmerin gemäß § 19 UStG.</p>
+      <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Vivian Glade, Anschrift wie oben.</p>
+      <p>Alle Zeichnungen, Aquarelle und Fotos auf dieser Seite sind von Vivian Glade oder zeigen sie bei der Arbeit. Nutzung nur mit Zustimmung.</p>
+    </details>
+    <details id="datenschutz"><summary>Datenschutz</summary>
+      <p><b>Verantwortlich:</b> Vivian Glade, Anschrift wie im Impressum.</p>
+      <p><b>Keine Cookies, kein Tracking.</b> Diese Seite setzt keine Cookies und nutzt keine Analyse-Werkzeuge. Schriften werden vom eigenen Server geladen.</p>
+      <p><b>Server-Protokolle:</b> Beim Aufruf speichert der Webserver technisch notwendige Daten (IP-Adresse, Datum, Uhrzeit, aufgerufene Seite, Browser), um die Seite sicher auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p><b>Anfragen:</b> Das Formular schickt selbst nichts ab. Es öffnet dein E-Mail-Programm oder WhatsApp mit einer vorbereiteten Nachricht. Was du dann sendest, nutze ich nur zur Bearbeitung deiner Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Für WhatsApp gelten zusätzlich die Datenschutzbestimmungen von WhatsApp.</p>
+      <p><b>Deine Rechte:</b> Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Beschwerde bei einer Datenschutz-Aufsichtsbehörde. Schreib mir an kontakt@vivianglade.de.</p>
+    </details>
+    <p>© Vivian Glade, Bremerhaven</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var W=[
+    ["einfach-klar","v","Einfach. Klar. Gezeichnet.","Erklärbild: vom komplexen Thema zum Bild für alle."],
+    ["umzug","v","Umzug nach Grünhöfe","Erklärbild in Leichter Sprache: ein Ablauf Schritt für Schritt."],
+    ["ngl","t","Neues geistliches Lied","Mindmap: Stile, Merkmale und Menschen eines großen Themas auf zwei Seiten."],
+    ["baden","v","Baden!","Comic in neun Bildern, Tusche und Aquarell."],
+    ["malcafe","v","Malcafé","Einladung als Sketchnote."],
+    ["licht","v","Wo Schatten ist, gibt’s immer auch Licht","Aquarell mit Lettering."],
+    ["figuren","t","Menschen in Bewegung","Figurenvokabular für Sketchnotes und Graphic Recording."],
+    ["fruehstueck","v","Freitags-Frühstück","Ankündigung als Sketchnote."],
+    ["logo-zk","t","Logo-Entwicklung Zuhausekirche","Von der Skizze zur Bildmarke."],
+    ["bildung","v","Du bist nicht aus dem Bildungsbürgertum","Visuelle Geschichte mit einem Bild und einem Satz."],
+    ["flip-alphabet","t","Sketchnote-Alphabet","Flipchart, live im Workshop gezeichnet."],
+    ["rezepte","t","Wir malen Rezepte","Einladung zum Malworkshop im Seniorentreff Grünhöfe."],
+    ["tunnel","f","Im Tunnel","Aquarell und Tusche."],
+    ["flip-basics","t","Grundformen","Flipchart aus einem Sketchnote-Workshop."],
+    ["tonsatz","f","Tonsatz, Bad Segeberg","Skizze vor Ort, Fineliner und Marker."],
+    ["blumen","f","Für dich","Aquarell und Tusche."],
+    ["tusche","f","Stillleben, 24.10.2026","Tusche laviert."],
+    ["aquarell-winter","f","Winterlandschaft","Aquarell."]
+  ];
+  var wall=document.getElementById("wall"),tags={v:"t-v",t:"t-t",f:"t-f"};
+  wall.innerHTML=W.map(function(w,i){return '<button class="work" type="button" data-i="'+i+'" data-c="'+w[1]+'"><img src="img/'+w[0]+'.jpg" alt="'+w[2]+': '+w[3]+'" loading="lazy"><span class="cap"><b>'+w[2]+'</b><i class="tag '+tags[w[1]]+'" aria-hidden="true"></i></span></button>'}).join("");
+  var cur="all";
+  document.querySelectorAll(".chip").forEach(function(c){c.addEventListener("click",function(){
+    cur=c.getAttribute("data-f");document.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",String(x===c))});
+    wall.querySelectorAll(".work").forEach(function(w){w.hidden=!(cur==="all"||w.getAttribute("data-c")===cur)});
+  })});
+  var lb=document.getElementById("lb"),img=document.getElementById("lb-img"),cap=document.getElementById("lb-cap"),view=document.getElementById("lb-view"),idx=0,last=null;
+  function visible(){return W.map(function(_,i){return i}).filter(function(i){return cur==="all"||W[i][1]===cur})}
+  function show(i){idx=i;var w=W[i];img.src="img/"+w[0]+".jpg";img.alt=w[2];cap.innerHTML="<b>"+w[2]+"</b>"+w[3];lb.classList.remove("zoom")}
+  function open(i){last=document.activeElement;show(i);lb.hidden=false;document.body.style.overflow="hidden";document.getElementById("lb-close").focus()}
+  function close(){lb.hidden=true;document.body.style.overflow="";if(last)last.focus()}
+  function step(d){var v=visible(),p=v.indexOf(idx);show(v[(p+d+v.length)%v.length])}
+  wall.addEventListener("click",function(e){var b=e.target.closest(".work");if(b)open(+b.getAttribute("data-i"))});
+  document.querySelectorAll("[data-lb]").forEach(function(el){el.addEventListener("click",function(){open(+el.getAttribute("data-lb"))})});
+  document.getElementById("lb-close").onclick=close;
+  document.getElementById("lb-prev").onclick=function(){step(-1)};
+  document.getElementById("lb-next").onclick=function(){step(1)};
+  view.addEventListener("click",function(e){if(e.target!==img){if(!lb.classList.contains("zoom"))close();return}
+    var r=img.getBoundingClientRect(),fx=(e.clientX-r.left)/r.width,fy=(e.clientY-r.top)/r.height;
+    lb.classList.toggle("zoom");if(lb.classList.contains("zoom")){requestAnimationFrame(function(){view.scrollLeft=fx*img.offsetWidth-view.clientWidth/2;view.scrollTop=fy*img.offsetHeight-view.clientHeight/2})}});
+  document.addEventListener("keydown",function(e){if(lb.hidden)return;if(e.key==="Escape")close();if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1)});
+
+  var form=document.getElementById("anfrage"),out=document.getElementById("out");
+  document.querySelectorAll("[data-pick]").forEach(function(a){a.addEventListener("click",function(){var v=a.getAttribute("data-pick");document.querySelectorAll('input[name="art"]').forEach(function(r){r.checked=(r.value===v)})})});
+  function val(id){return (document.getElementById(id).value||"").trim()}
+  function check(id,errId){var ok=!!val(id);document.getElementById(id).setAttribute("aria-invalid",ok?"false":"true");document.getElementById(errId).hidden=ok;return ok}
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var a1=check("f-name","e-name"),a2=check("f-kontakt","e-kontakt");
+    if(!a1||!a2){out.textContent="Es fehlen noch Name und Kontakt. Mehr brauche ich nicht.";document.getElementById(a1?"f-kontakt":"f-name").focus();return}
+    var art=(form.querySelector('input[name="art"]:checked')||{}).value||"Projekt";
+    var lines=["Hallo Vivian,","","ich möchte ein Projekt anfragen.","","Art: "+art];
+    if(val("f-zeit"))lines.push("Zeitraum: "+val("f-zeit"));
+    if(val("f-text"))lines.push("","Beschreibung:",val("f-text"));
+    lines.push("","Kontakt: "+val("f-kontakt"),"","Viele Grüße","",val("f-name"));
+    var body=lines.join("\n"),via=(e.submitter&&e.submitter.getAttribute("data-via"))||"mail",href;
+    if(via==="wa")href="https://wa.me/4915227153259?text="+encodeURIComponent(body);
+    else href="mailto:kontakt@vivianglade.de?subject="+encodeURIComponent("Projektanfrage: "+art+(val("f-zeit")?" ("+val("f-zeit")+")":""))+"&body="+encodeURIComponent(body);
+    var a=document.createElement("a");a.href=href;if(via==="wa"){a.target="_blank";a.rel="noopener"}
+    a.textContent=via==="wa"?"WhatsApp öffnen":"E-Mail öffnen";
+    out.textContent="Deine Anfrage ist vorbereitet. Falls sich nichts geöffnet hat: ";out.appendChild(a);
+    out.appendChild(document.createTextNode(" oder schreib direkt an kontakt@vivianglade.de."));
+    a.click();
+  });
+  document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){
+    var v=b.getAttribute("data-copy"),done=function(){b.textContent="Kopiert";setTimeout(function(){b.textContent="Kopieren"},1600)};
+    try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}
+  })});
+  function sel(b){var el=b.previousElementSibling,r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+})();
+</script>
+
+</body>
+</html>
