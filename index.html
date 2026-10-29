@@ -1,4 +1,4 @@
-<!doctype html><!-- GitHub Pages neu veröffentlichen -->
+<!doctype html><!-- GitHub Pages -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
@@ -211,6 +211,8 @@ section{padding-block:72px}
 .req .kicker{color:var(--sun)}
 .req h2{color:var(--paper)}
 .req .intro{color:color-mix(in srgb,var(--paper) 80%,transparent);font-size:19px}
+.privat{border:1.5px solid color-mix(in srgb,var(--sun) 70%,transparent);border-radius:14px;padding:12px 14px;font-size:16px;color:color-mix(in srgb,var(--paper) 88%,transparent)}
+.privat b{color:var(--sun)}
 .contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;border:1.5px solid color-mix(in srgb,var(--paper) 30%,transparent);border-radius:14px;padding:12px 14px}
 .contact-row .lbl{width:100%;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
 .contact-row b{font-size:19px;user-select:all;word-break:break-all}
@@ -377,8 +379,9 @@ details p{margin-top:8px;max-width:75ch}
           <div><b>Prozessbegleitung</b><span>Über mehrere Termine, vom Ziel bis zur Entscheidung</span></div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-          <p style="color:var(--ink-soft)">Für Teams und Führungskräfte, Bildungseinrichtungen, Kirchen, Vereine und soziale Organisationen.</p>
+          <p style="color:var(--ink-soft)">Für Teams und Führungskräfte, Bildungseinrichtungen, Kirchen, Vereine und soziale Organisationen. Und für Einzelpersonen, die es selbst lernen wollen.</p>
           <a class="btn primary" href="#anfragen" data-pick="Workshop „Denken mit dem Stift“">Workshop anfragen</a>
+          <a class="btn" href="#anfragen" data-pick="Für mich persönlich (Kurs, Einzeltermin)">Für mich persönlich</a>
         </div>
       </div>
     </div>
@@ -431,6 +434,7 @@ details p{margin-top:8px;max-width:75ch}
         <div class="kicker">Vivian buchen</div>
         <h2>Projekt anfragen</h2>
         <p class="intro">Erzähl mir kurz, worum es geht. Du bekommst ein individuelles Angebot. Eine Anfrage ist noch keine Buchung und verpflichtet zu nichts.</p>
+        <div class="privat"><b>Auch für Einzelpersonen.</b> Du möchtest selbst mit dem Stift denken lernen, Sketchnotes für deinen Beruf nutzen oder eine Einzelstunde? Wähl im Formular „Für mich persönlich“.</div>
         <div class="contact-row"><span class="lbl">E-Mail</span><b>kontakt@vivianglade.de</b><button class="copy" type="button" data-copy="kontakt@vivianglade.de">Kopieren</button></div>
         <div class="contact-row"><span class="lbl">Telefon &amp; WhatsApp</span><b>+49 1522 7153259</b><button class="copy" type="button" data-copy="+49 1522 7153259">Kopieren</button></div>
       </div>
@@ -441,6 +445,7 @@ details p{margin-top:8px;max-width:75ch}
             <label><input type="radio" name="art" id="art-musik" value="Musikprojekt"><i style="background:var(--lav)"></i>Musikprojekt anfragen</label>
             <label><input type="radio" name="art" id="art-visuell" value="Graphic Recording / visuelle Geschichte" checked><i style="background:var(--sun)"></i>Graphic Recording / visuelle Geschichte anfragen</label>
             <label><input type="radio" name="art" id="art-denken" value="Workshop „Denken mit dem Stift“"><i style="background:var(--sky)"></i>Workshop „Denken mit dem Stift“ anfragen</label>
+            <label><input type="radio" name="art" id="art-privat" value="Für mich persönlich (Kurs, Einzeltermin)"><i style="background:var(--ink)"></i>Für mich persönlich: Kurs oder Einzeltermin</label>
           </div>
         </fieldset>
         <div class="row2">
