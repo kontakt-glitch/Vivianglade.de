@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probeseite – Vivian Glade</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Probeseite (Entwurf): Vivian Glade – Musik, Zeichnung und neue Wege für Gruppen. Noch nicht die echte Seite.">
+<style>
+/* Probeseite 2 „Ankommen“ (Entwurf, 05.11.2026, nach Vivis Rückmeldung „zu kalt“):
+   Erst Ruhe, dann Neugier-Fäden, dann kennenlernen, einladen, angemessen bezahlen.
+   Warmes Papierweiß statt Creme, Aquarell-Licht in Vivis Farben (Pastellblau, Chrome Yellow, Payne's Grey),
+   viel Luft, ihre eigenen Zeichnungen. Kein Navy-Block mehr. Schriften selbst gehostet. */
+@font-face{font-family:"Fraunces";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:400;font-display:swap;src:url(../fonts/instrument-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-weight:600;font-display:swap;src:url(../fonts/instrument-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Shantell Sans";font-weight:500;font-display:swap;src:url(../fonts/shantell-sans-latin-500-normal.woff2) format("woff2")}
+
+:root{
+  --paper:#fbf8f2; --note:#ffffff; --ink:#2b3640; --payne:#536878; --soft:#5d6873;
+  --sky:#8DBBD8; --sky-wash:#e6f0f7; --sun:#E4AD27; --sun-wash:#fbecc4; --line:#e4ddd0;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hand:"Shantell Sans","Comic Sans MS",cursive;
+  --shadow:0 1px 2px rgb(60 50 30/.06),0 18px 40px -24px rgb(60 50 30/.35);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.7 var(--sans);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--payne);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+@media (min-width:768px){.wrap{padding:0 32px}}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+
+/* Hinweisband: nur Probe */
+.probe{background:var(--sun-wash);color:var(--ink);font-size:.85rem;text-align:center;padding:6px 12px}
+.entwurf{display:inline-block;font:500 .72rem/1.3 var(--hand);background:var(--sun-wash);color:#6b4e00;padding:2px 8px;border-radius:999px;vertical-align:middle}
+
+/* Kopf: leise */
+.kopf{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px}
+.marke{font:600 1.15rem/1 var(--serif);text-decoration:none;letter-spacing:.01em}
+.kopf nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem}
+.kopf nav a{text-decoration:none;color:var(--soft)}
+.kopf nav a:hover{color:var(--ink)}
+@media (max-width:560px){.kopf nav a:not(.nav-cta){display:none}}
+.nav-cta{border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px;color:var(--ink)!important}
+
+/* Aquarell-Licht: zwei weiche Farbflecken, sonst nichts */
+.licht{position:relative;isolation:isolate;overflow-x:clip}
+.licht::before,.licht::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(40px);opacity:.55;pointer-events:none}
+.licht::before{width:520px;height:420px;left:-160px;top:-60px;background:radial-gradient(circle,var(--sun-wash),transparent 70%)}
+.licht::after{width:560px;height:460px;right:-200px;top:120px;background:radial-gradient(circle,var(--sky-wash),transparent 70%)}
+
+/* 1 · Ankommen */
+.ankommen{display:grid;gap:28px;align-items:start;padding-block:8px 72px}
+.ankommen .zeichnung{order:-1;max-width:300px}
+@media (min-width:880px){.ankommen{grid-template-columns:1.05fr .95fr;gap:64px;padding-block:16px 110px}.ankommen .zeichnung{order:0;max-width:440px}.ankommen>div{padding-top:72px}}
+.ankommen h1{font:400 clamp(2.3rem,6vw,4rem)/1.08 var(--serif);margin:0;letter-spacing:-.01em}
+.ankommen h1 em{font-style:italic;color:var(--payne)}
+.ankommen .unter{font-size:1.15rem;color:var(--soft);max-width:34ch;margin:26px 0 0}
+.ankommen .leise{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.zeichnung{background:var(--note);padding:14px 14px 10px;box-shadow:var(--shadow);transform:rotate(1.2deg);max-width:440px;justify-self:center}
+.zeichnung figcaption{font:500 .85rem/1.4 var(--hand);color:var(--soft);padding:10px 4px 2px}
+@media (prefers-reduced-motion:reduce){.zeichnung{transform:none}}
+
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--payne)}
+.btn.zart{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.zart:hover{background:var(--sky-wash)}
+.runter{font:500 .95rem/1 var(--hand);color:var(--soft);text-decoration:none}
+
+/* Atempause: ein Satz */
+.atem{padding-block:40px 90px;text-align:center}
+.atem p{font:400 italic clamp(1.4rem,3.4vw,2.1rem)/1.4 var(--serif);max-width:28ch;margin:0 auto;color:var(--payne)}
+.atem .strich{display:block;width:120px;height:14px;margin:26px auto 0}
+
+/* Abschnittsköpfe */
+.kicker{font:500 .95rem/1.3 var(--hand);color:var(--payne);margin:0 0 8px}
+h2{font:400 clamp(1.8rem,4.2vw,2.7rem)/1.15 var(--serif);margin:0;letter-spacing:-.01em}
+.einleitung{color:var(--soft);max-width:56ch;margin:14px 0 0}
+section{scroll-margin-top:20px}
+
+/* 2 · Neugier-Fäden */
+.faeden{padding-block:40px 100px}
+.faden-liste{display:grid;gap:28px;margin-top:40px}
+@media (min-width:720px){.faden-liste{grid-template-columns:1fr 1fr;gap:36px}}
+.faden{background:var(--note);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.faden:nth-child(odd){transform:rotate(-.5deg)}.faden:nth-child(even){transform:rotate(.6deg)}
+@media (prefers-reduced-motion:reduce){.faden{transform:none!important}}
+.faden img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.faden .inhalt{padding:20px 22px 22px}
+.faden h3{font:400 1.35rem/1.3 var(--serif);margin:0}
+.faden details{margin-top:12px}
+.faden summary{cursor:pointer;font:500 .95rem/1.4 var(--hand);color:var(--payne);list-style:none;display:inline-flex;gap:6px;align-items:center;min-height:44px}
+.faden summary::-webkit-details-marker{display:none}
+.faden summary::after{content:"↓";transition:transform .2s}
+.faden details[open] summary::after{transform:rotate(180deg)}
+.faden details p{margin:6px 0 0;color:var(--soft)}
+.luecke{border:1.5px dashed var(--sky);background:var(--sky-wash);padding:8px 12px;font:500 .85rem/1.4 var(--hand);color:var(--payne);margin-top:10px}
+
+/* 3 · So denke ich */
+.denken{padding:90px 0;background:linear-gradient(180deg,transparent,var(--sky-wash) 18%,var(--sky-wash) 82%,transparent)}
+.weg{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+@media (min-width:760px){.weg{grid-template-columns:repeat(7,1fr);gap:10px}}
+.weg li{counter-increment:s;background:var(--note);padding:16px 14px;box-shadow:var(--shadow)}
+.weg li::before{content:counter(s);font:500 .9rem/1 var(--hand);color:var(--sun);display:block;margin-bottom:6px}
+.weg b{font:600 1.02rem/1.3 var(--serif);display:block}
+.weg span{font-size:.9rem;color:var(--soft);display:block;margin-top:4px;line-height:1.45}
+.weg li:nth-child(6){background:var(--sun-wash)}
+
+/* 4 · Kennenlernen */
+.kennen{padding-block:100px 80px}
+.kennen-grid{display:grid;gap:40px;margin-top:10px}
+@media (min-width:880px){.kennen-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}}
+.fotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:var(--shadow)}
+.fotos img:nth-child(1){transform:rotate(-1.2deg)}.fotos img:nth-child(4){transform:rotate(1deg)}
+.kennen p{margin:16px 0 0;color:var(--soft)}
+.kennen .gross{font:400 1.35rem/1.5 var(--serif);color:var(--ink)}
+.werkzeuge{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.werkzeuge li{border:1px solid var(--line);background:var(--note);border-radius:999px;padding:4px 14px;font-size:.92rem}
+
+/* 5 · Einladen */
+.einladen{padding-block:80px 100px}
+.formate{display:grid;gap:22px;margin-top:40px}
+@media (min-width:760px){.formate{grid-template-columns:1fr 1fr}}
+.format{background:var(--note);box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;border-top:4px solid var(--sky)}
+.format:nth-child(2){border-top-color:var(--sun)}.format:nth-child(3){border-top-color:var(--payne)}.format:nth-child(4){border-top-color:var(--sun)}
+.format h3{font:400 1.45rem/1.25 var(--serif);margin:0}
+.format .fuer{color:var(--soft);margin:8px 0 0}
+.format ul{margin:14px 0 0;padding-left:1.1em;color:var(--soft);font-size:.95rem}
+.preis{margin-top:auto;padding-top:18px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.preis b{font:600 1.15rem/1 var(--serif)}
+.wert{margin-top:36px;background:var(--note);border-left:4px solid var(--sun);padding:20px 22px;box-shadow:var(--shadow);max-width:760px}
+.wert p{margin:0;color:var(--soft)}
+.wert p+p{margin-top:10px}
+
+/* 6 · Kontakt */
+.kontakt{padding-block:20px 110px}
+.brief{background:var(--note);box-shadow:var(--shadow);padding:34px 120px 34px 26px;max-width:720px;margin:0 auto;transform:rotate(-.4deg)}
+@media (prefers-reduced-motion:reduce){.brief{transform:none}}
+.brief h2{text-align:left}
+.brief ol{margin:18px 0 0;padding-left:1.2em;color:var(--soft)}
+.brief .leise{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* Freigestellte Fotos auf Aquarell-Fleck (Vivi, 05.11.2026) */
+.portraet{position:relative;isolation:isolate;max-width:420px;margin:0 auto}
+.portraet::before{content:"";position:absolute;z-index:-1;inset:12% -6% 0 -6%;border-radius:46% 54% 50% 50%/55% 48% 52% 45%;background:radial-gradient(circle at 40% 40%,var(--sky),var(--sky-wash) 70%);opacity:.75}
+.portraet img{width:100%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 99%),linear-gradient(to right,transparent,#000 6%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 78%,transparent 99%),linear-gradient(to right,transparent,#000 6%);mask-composite:intersect}
+.tun{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.tun figure{margin:0;background:var(--note);padding:6px 6px 4px;box-shadow:var(--shadow)}
+.tun figure:nth-child(odd){transform:rotate(-1.5deg)}.tun figure:nth-child(even){transform:rotate(1.2deg)}
+.tun img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.tun figcaption{font:500 .72rem/1.3 var(--hand);color:var(--soft);padding-top:4px;text-align:center}
+.unterschrift{width:220px;margin-top:22px}
+.brief{position:relative}
+.selbst{position:absolute;right:-14px;top:-46px;width:120px;transform:rotate(4deg)}
+@media (min-width:700px){.selbst{width:150px;right:-30px;top:-60px}}
+@media (prefers-reduced-motion:reduce){.tun figure,.selbst{transform:none}}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:.88rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Ruhig erscheinen – nur wenn Bewegung erwünscht ist */
+@media (prefers-reduced-motion:no-preference){
+  .js .sanft{opacity:0;translate:0 14px;transition:opacity .9s ease,translate .9s ease}
+  .js .sanft.da{opacity:1;translate:0 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+<div class="probe" role="note"><b>Probeseite 2</b> – nur zum Anschauen. Texte sind Entwürfe, gestrichelte Stellen warten auf dich.</div>
+
+<div class="licht">
+<header class="wrap kopf">
+  <a class="marke" href="./">Vivian Glade</a>
+  <nav aria-label="Seitenbereiche">
+    <a href="#faeden">Geschichten</a>
+    <a href="#kennen">Über mich</a>
+    <a href="#einladen">Einladen</a>
+    <a class="nav-cta" href="#kontakt">Lass uns reden</a>
+  </nav>
+</header>
+
+<main id="inhalt">
+<!-- 1 · Ankommen: Ruhe zuerst -->
+<section class="wrap ankommen" aria-labelledby="h-start">
+  <div>
+    <h1 id="h-start">Was wäre, wenn es auch <em>ganz anders</em> geht?</h1>
+    <p class="unter">Ich bin Vivian Glade. Ich mache Musik, zeichne und erfinde mit Menschen neue Wege, wenn die alten nicht mehr reichen.</p>
+    <div class="leise">
+      <a class="btn" href="#kontakt">Lass uns reden <span aria-hidden="true">→</span></a>
+      <a class="runter" href="#faeden">oder erst mal stöbern ↓</a>
+    </div>
+  </div>
+  <figure class="zeichnung" style="margin:0">
+    <img src="../img/licht.jpg" width="891" height="1300" alt="Zeichnung von Vivian Glade: ein Kind steht im Schatten, daneben in gelbem Licht der Satz „Wo Schatten ist, gibt's immer auch Licht.“">
+    <figcaption>Eine meiner Zeichnungen. Ungefähr so arbeite ich auch.</figcaption>
+  </figure>
+</section>
+</div>
+
+<!-- Atempause -->
+<section class="wrap atem sanft" aria-label="Leitsatz">
+  <p>Meistens steckt in einer Gruppe mehr, als man gerade sieht. Ich helfe, es zu finden.</p>
+  <svg class="strich" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 9 C 20 2, 34 13, 52 7 S 86 3, 118 8" fill="none" stroke="#E4AD27" stroke-width="3" stroke-linecap="round"/></svg>
+</section>
+
+<!-- 2 · Neugier-Fäden -->
+<section id="faeden" class="wrap faeden" aria-labelledby="h-faeden">
+  <p class="kicker">Vier Fäden zum Ziehen</p>
+  <h2 id="h-faeden">Was man mit mir erleben kann</h2>
+  <p class="einleitung">Keine Leistungsliste. Lieber vier Momente, an denen etwas anders wurde.</p>
+  <div class="faden-liste">
+    <article class="faden sanft">
+      <img src="../img/flip-basics.jpg" width="900" height="1200" alt="Flipchart mit gezeichneten Grundformen" loading="lazy">
+      <div class="inhalt">
+        <h3>Warum wollten nach einer Klausurtagung plötzlich alle eine Visualistin?</h3>
+        <details><summary>Geschichte lesen</summary>
+          <p>Ich habe mitgezeichnet, live, auf einem Flipchart. Am Ende hatten alle ein Bild von dem, was sie gerade gemeinsam gedacht hatten. Danach kamen gleich mehrere Anfragen.</p>
+          <p class="luecke">Hier kommt dein Satz: Was war die Frage? Was hat sich danach verändert?</p>
+        </details>
+      </div>
+    </article>
+    <article class="faden sanft">
+      <img src="../img/chor-konzert.jpg" width="1300" height="732" alt="Chor bei einem Konzert in roter Bühnenbeleuchtung" loading="lazy">
+      <div class="inhalt">
+        <h3>Was passiert, wenn ein Chor an Weihnachten die Deko abreißt?</h3>
+        <details><summary>Geschichte lesen</summary>
+          <p>KRIPPENABRISS: ein Weihnachtskonzert, das erst zeigt, wie anstrengend „Weihnachten mit Plastik“ ist, und dann leise wird. Mit Laien, Kindern und einem Kindersolisten.</p>
+          <p class="luecke">Hier kommt deine Zeile: Was sollen die Leute danach mitnehmen?</p>
+        </details>
+      </div>
+    </article>
+    <article class="faden sanft">
+      <img src="../img/figuren.jpg" width="1300" height="934" alt="Viele kleine gezeichnete Figuren in Bewegung" loading="lazy">
+      <div class="inhalt">
+        <h3>Wie lernt ein Kind mit LRS einen englischen Song?</h3>
+        <details><summary>Geschichte lesen</summary>
+          <p>Mit einem Bild pro Zeile, Lautschrift und richtiger Schrift, und mit der Möglichkeit, jede Zeile vorgesprochen zu bekommen. Am Ende nutzen das nicht nur die Kinder, sondern der ganze Chor.</p>
+          <p class="luecke">Hier kommt dein Satz: Was hat dich daran am meisten berührt?</p>
+        </details>
+      </div>
+    </article>
+    <article class="faden sanft">
+      <img src="../img/rezepte.jpg" width="1040" height="1300" alt="Aquarell: gemalte Zutaten mit der Überschrift „Wir malen Rezepte“" loading="lazy">
+      <div class="inhalt">
+        <h3>Was malt ein Seniorentreff, wenn man ihm Rezepte gibt?</h3>
+        <details><summary>Geschichte lesen</summary>
+          <p>Erinnerungen. Aus Zwiebeln, Zitronen und Paprika wurden Geschichten von früher, und alle hatten etwas zu erzählen.</p>
+          <p class="luecke">Bitte prüfen: Stimmt das so? Was war das für ein Treffen?</p>
+        </details>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 3 · So denke ich -->
+<section id="denken" class="denken" aria-labelledby="h-denken">
+  <div class="wrap">
+    <p class="kicker">Mein Weg, ungefähr</p>
+    <h2 id="h-denken">Vom Hinschauen bis zum Staunen</h2>
+    <p class="einleitung">Ich bringe keine fertige Methode mit und rolle sie aus. Ich finde mit euch heraus, was gerade hilft, und erfinde es manchmal neu.</p>
+    <ol class="weg">
+      <li><b>Beobachten</b><span>Was ist hier wirklich los?</span></li>
+      <li><b>Entdecken</b><span>Was ist schon da, wird aber nicht gesehen?</span></li>
+      <li><b>Verbinden</b><span>Was gehört zusammen?</span></li>
+      <li><b>Erfinden</b><span>Was probieren wir, das es so noch nicht gibt?</span></li>
+      <li><b>Erleben</b><span>Wie wird es spürbar statt nur verstanden?</span></li>
+      <li><b>Staunen</b><span>„Oh. Das geht ja auch.“</span></li>
+      <li><b>Weiter</b><span>Was trägt, was ändern wir?</span></li>
+    </ol>
+    <p class="luecke" style="max-width:560px">Hier könnte statt der Kästen deine gezeichnete Sketchnote stehen.</p>
+  </div>
+</section>
+
+<!-- 4 · Kennenlernen -->
+<section id="kennen" class="wrap kennen" aria-labelledby="h-kennen">
+  <div class="kennen-grid">
+    <div class="sanft">
+      <div class="portraet">
+        <img src="../img/vivi-frei-kirche.webp" width="760" height="1125" alt="Vivian Glade lächelt in die Kamera" loading="lazy">
+      </div>
+      <div class="tun" aria-label="Vivi bei der Arbeit">
+        <figure><img src="../img/tun-kreide.webp" alt="Vivi malt mit Kreide ein großes Bild an eine Betonwand" loading="lazy"><figcaption>malen</figcaption></figure>
+        <figure><img src="../img/tun-buehne.webp" alt="Vivi am Keyboard auf einer Bühne mit Band-Aufbau" loading="lazy"><figcaption>spielen</figcaption></figure>
+        <figure><img src="../img/tun-probe.webp" alt="Vivi am Klavier in einer Probe" loading="lazy"><figcaption>proben</figcaption></figure>
+        <figure><img src="../img/tun-gitarre.webp" alt="Vivi spielt E-Gitarre" loading="lazy"><figcaption>rocken</figcaption></figure>
+        <figure><img src="../img/tun-stream.webp" alt="Vivi am Regiepult beim Streaming" loading="lazy"><figcaption>streamen</figcaption></figure>
+        <figure><img src="../img/tun-online.webp" alt="Vivi zieht in einer Videokonferenz ein lustiges Gesicht" loading="lazy"><figcaption>online</figcaption></figure>
+      </div>
+    </div>
+    <div>
+      <p class="kicker">Hallo</p>
+      <h2 id="h-kennen">Ich bin Vivi.</h2>
+      <p class="gross">Kantorin, Chorleiterin, Zeichnerin, Erfinderin. Seit über 30 Jahren bringe ich Menschen zum Singen. Und ich zeichne, um zu verstehen.</p>
+      <p>Ich denke anders, manchmal schneller und manchmal um drei Ecken. Genau das holen Leute sich, wenn sie mich einladen: einen frischen Blick und den Mut, etwas auszuprobieren.</p>
+      <p class="luecke">Hier kommen 2–3 Sätze von dir: Was soll man über dich wissen, bevor man dich trifft?</p>
+      <ul class="werkzeuge" aria-label="Womit ich arbeite">
+        <li>Musik &amp; Chor</li><li>Zeichnen &amp; Sketchnotes</li><li>Graphic Recording</li><li>Geschichten</li><li>Visuelles Denken</li><li>Digitale Werkzeuge</li><li>Räume gestalten</li><li>Gemeinschaft</li>
+      </ul>
+      <img class="unterschrift" src="../img/vivi-unterschrift.webp" width="600" height="150" alt="Unterschrift: Vivian Glade" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Einladen – mit Wert -->
+<section id="einladen" class="wrap einladen" aria-labelledby="h-einladen">
+  <p class="kicker">So kannst du mich einladen</p>
+  <h2 id="h-einladen">Vier Wege, mit mir zu arbeiten</h2>
+  <p class="einleitung">Jede Anfrage beginnt mit einem Gespräch. Danach bekommst du ein klares Angebot, ohne Kleingedrucktes.</p>
+  <div class="formate">
+    <article class="format sanft">
+      <h3>Ein Impuls</h3>
+      <p class="fuer">Für Tagungen, Gemeinden, Teams: ein Vortrag oder Abend, bei dem ich live zeichne oder Musik einbaue.</p>
+      <ul><li>Vorgespräch und Vorbereitung</li><li>60–90 Minuten vor Ort</li><li>Die Zeichnung bleibt bei euch</li></ul>
+      <p class="preis"><b>ab ___ €</b> <span class="entwurf">Betrag von dir</span></p>
+    </article>
+    <article class="format sanft">
+      <h3>Ein Tag mit dem Stift</h3>
+      <p class="fuer">Graphic Recording oder visuelle Moderation für Klausuren, Workshops und Konferenzen.</p>
+      <ul><li>Live-Visualisierung ganztags</li><li>Fotoprotokoll am selben Tag</li><li>Nutzungsrechte für eure Doku</li></ul>
+      <p class="preis"><b>ab ___ € pro Tag</b> <span class="entwurf">Betrag von dir</span></p>
+    </article>
+    <article class="format sanft">
+      <h3>Ein Prozess</h3>
+      <p class="fuer">Wenn ihr merkt: So wie bisher kommen wir nicht weiter. Ich begleite über Wochen und wir entwickeln neue Formate.</p>
+      <ul><li>Erkunden, erfinden, ausprobieren</li><li>Mehrere Treffen, auch digital</li><li>Ergebnisse, die bleiben</li></ul>
+      <p class="preis"><b>nach Absprache</b> <span class="entwurf">Rahmen von dir</span></p>
+    </article>
+    <article class="format sanft">
+      <h3>Musik, die etwas bewegt</h3>
+      <p class="fuer">Chorprojekte, Konzertformate, Mitsing-Abende, Workshops für Stimme und Gemeinschaft.</p>
+      <ul><li>Konzept und Arrangements</li><li>Proben und Leitung</li><li>Auf Wunsch mit Band</li></ul>
+      <p class="preis"><b>ab ___ €</b> <span class="entwurf">Betrag von dir</span></p>
+    </article>
+  </div>
+  <div class="wert sanft">
+    <p><b>Warum es Honorare gibt:</b> In jedem Termin stecken Vorbereitung, Erfahrung und Nachbereitung. Ein faires Honorar sorgt dafür, dass ich mit voller Kraft für euch da sein kann.</p>
+    <p>Für kleine gemeinnützige Initiativen halte ich jedes Jahr ein paar Termine zu besonderen Konditionen frei. Fragt einfach.</p>
+  </div>
+</section>
+
+<!-- 6 · Kontakt -->
+<section id="kontakt" class="wrap kontakt" aria-labelledby="h-kontakt">
+  <div class="brief sanft">
+    <img class="selbst" src="../img/vivi-selbstportraet-zeichnung.webp" width="520" height="614" alt="Selbstporträt von Vivi, gezeichnet mit Tusche und Aquarell" loading="lazy">
+    <p class="kicker">Lass uns reden</p>
+    <h2 id="h-kontakt">Erzähl mir, wo ihr gerade steht.</h2>
+    <ol>
+      <li>Was ist los, und was soll anders werden?</li>
+      <li>Wann und wo?</li>
+      <li>Welchen Budgetrahmen habt ihr?</li>
+    </ol>
+    <div class="leise">
+      <a class="btn" href="mailto:kontakt@vivianglade.de?subject=Anfrage%20%C3%BCber%20vivianglade.de&amp;body=Hallo%20Vivi%2C%0A%0AWas%20ist%20los%3A%0A%0AWann%20und%20wo%3A%0A%0ABudgetrahmen%3A%0A">E-Mail schreiben <span aria-hidden="true">→</span></a>
+      <a class="btn zart" href="https://instagram.com/vivian_glade" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Probeseite 2 · noch nicht veröffentlicht</span>
+    <span><a href="../#impressum">Impressum</a> · <a href="../#datenschutz">Datenschutz</a> · <a href="../">zur aktuellen Seite</a></span>
+  </div>
+</footer>
+<script>
+// Abschnitte erscheinen ruhig, sobald man hinscrollt. Ohne JavaScript ist alles sofort sichtbar.
+(function(){
+  document.documentElement.classList.add('js');
+  var el=document.querySelectorAll('.sanft');
+  if(!('IntersectionObserver' in window)){el.forEach(function(e){e.classList.add('da')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('da');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  el.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
