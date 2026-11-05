@@ -23,7 +23,7 @@
 /* Layout: Atelierwand – große Zusage mit Marker-Strichen, Porträt im Aquarellfleck, angepinnte Arbeiten; drei Bereiche als Kapitel mit eigener Farbe; filterbare Wand mit Großansicht; Anfrage immer erreichbar */
 :root{
   --paper:#FBFAF6; --sheet:#FFFFFF; --ink:#1B1B1D; --ink-soft:#4F5963; --grey:#DDE2E7; --grey-2:#EEF1F4;
-  --sun:#E4AD27; --sun-wash:#F8EBC9; --lav:#536878; --lav-wash:#E3E8EC; --sky:#8DBBD8; --sky-wash:#E2EEF6;
+  --sun:#E4AD27; --sun-wash:#F8EBC9; --navy:#14223F; --on-navy:#FBFAF6; --lav:#536878; --lav-wash:#E3E8EC; --sky:#8DBBD8; --sky-wash:#E2EEF6;
   --payne:#3E4C59; --on-sun:#1B1B1D; --on-payne:#FBFAF6;
   --display:"Bricolage Grotesque","Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;
   --hand:"Shantell Sans","Segoe Print","Comic Sans MS",cursive;
@@ -31,10 +31,10 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#16191C; --sheet:#1F2428; --ink:#F2F3F4; --ink-soft:#B3BCC5; --grey:#343B42; --grey-2:#262C31;
-  --sun:#E4AD27; --sun-wash:#3A3020; --lav:#8A9DAD; --lav-wash:#232B32; --sky:#8DBBD8; --sky-wash:#1C2A35; --payne:#2B3540; --on-sun:#1B1B1D; --on-payne:#F2F3F4; color-scheme:dark}}
+  --sun:#E4AD27; --sun-wash:#3A3020; --navy:#A9BBDD; --on-navy:#16191C; --lav:#8A9DAD; --lav-wash:#232B32; --sky:#8DBBD8; --sky-wash:#1C2A35; --payne:#2B3540; --on-sun:#1B1B1D; --on-payne:#F2F3F4; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#16191C; --sheet:#1F2428; --ink:#F2F3F4; --ink-soft:#B3BCC5; --grey:#343B42; --grey-2:#262C31;
-  --sun:#E4AD27; --sun-wash:#3A3020; --lav:#8A9DAD; --lav-wash:#232B32; --sky:#8DBBD8; --sky-wash:#1C2A35; --payne:#2B3540; --on-sun:#1B1B1D; --on-payne:#F2F3F4; color-scheme:dark}
+  --sun:#E4AD27; --sun-wash:#3A3020; --navy:#A9BBDD; --on-navy:#16191C; --lav:#8A9DAD; --lav-wash:#232B32; --sky:#8DBBD8; --sky-wash:#1C2A35; --payne:#2B3540; --on-sun:#1B1B1D; --on-payne:#F2F3F4; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.55;margin:0}
@@ -107,7 +107,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .field b{font-family:var(--display);font-size:20px;line-height:1.1;display:block;letter-spacing:-.01em}
 .field span{font-size:14px;color:var(--ink-soft)}
 .field .go{font-size:22px}
-.f-m .dot{background:var(--lav);color:var(--on-payne)}.f-v .dot{background:var(--sun)}.f-t .dot{background:var(--sky)}
+.f-m .dot{background:var(--lav);color:var(--on-payne)}.f-v .dot{background:var(--navy);color:var(--on-navy)}.f-t .dot{background:var(--sky)}
 
 /* Proof strip */
 .proof{display:flex;flex-wrap:wrap;gap:8px 26px;padding-block:22px 8px;color:var(--ink-soft);font-size:15px;border-top:1.5px dashed var(--grey);margin-top:22px}
@@ -120,9 +120,9 @@ section{padding-block:72px}
 .chap-head .num{font:700 15px var(--hand);display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
 .chap-head .num i{display:inline-block;width:28px;height:28px;border-radius:50%}
 .chap-head p{font-size:19px;color:var(--ink-soft);max-width:52ch}
-.c-m .num i{background:var(--lav)}.c-v .num i{background:var(--sun)}.c-t .num i{background:var(--sky)}
+.c-m .num i{background:var(--lav)}.c-v .num i{background:var(--navy)}.c-t .num i{background:var(--sky)}
 .c-m{background:linear-gradient(var(--lav-wash),var(--paper) 70%)}
-.c-v{background:linear-gradient(var(--sun-wash),var(--paper) 60%)}
+.c-v{background:var(--paper);border-top:1.5px solid color-mix(in srgb,var(--navy) 22%,transparent)}
 .c-t{background:linear-gradient(var(--sky-wash),var(--paper) 70%)}
 
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
@@ -157,8 +157,8 @@ section{padding-block:72px}
 @media (max-width:760px){.outcomes{grid-template-columns:1fr}}
 .outcomes div{background:var(--sheet);border-radius:18px;padding:20px;border:2px solid var(--ink);display:grid;gap:8px}
 .outcomes svg{width:40px;height:40px}
-.formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-@media (max-width:900px){.formats{grid-template-columns:1fr 1fr}}
+.formats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.formats{grid-template-columns:1fr}}
 @media (max-width:460px){.formats{grid-template-columns:1fr}}
 .formats div{border:1.5px dashed var(--ink-soft);border-radius:16px;padding:14px 16px}
 .formats b{display:block;font-family:var(--display);font-size:19px}
@@ -213,7 +213,7 @@ section{padding-block:72px}
 .req h2{color:var(--on-payne)}
 .req .intro{color:color-mix(in srgb,var(--on-payne) 82%,transparent);font-size:19px}
 .privat{border:1.5px solid color-mix(in srgb,var(--sun) 70%,transparent);border-radius:14px;padding:12px 14px;font-size:16px;color:color-mix(in srgb,var(--on-payne) 88%,transparent)}
-.privat b{color:var(--sun)}
+.privat b{color:var(--sun)}.privat a{color:var(--on-payne);font-weight:600;text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:2px;text-underline-offset:3px}
 .contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;border:1.5px solid color-mix(in srgb,var(--on-payne) 30%,transparent);border-radius:14px;padding:12px 14px}
 .contact-row .lbl{width:100%;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
 .contact-row b{font-size:19px;user-select:all;word-break:break-all}
@@ -286,7 +286,7 @@ details p{margin-top:8px;max-width:75ch}
       <nav class="fields" aria-label="Angebotsbereiche">
         <a class="field f-m" href="#musik"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><div><b>Musik &amp; musikalische Leitung</b><span>Chor, Band, Komposition, Livestream</span></div><span class="go" aria-hidden="true">→</span></a>
         <a class="field f-v" href="#visuell"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21l2-4M17 21l-2-4M7 8h6M7 12c3-3 5 2 8-1"/></svg></span><div><b>Graphic Recording &amp; visuelle Geschichten</b><span>Live oder als ausgearbeitete Illustration</span></div><span class="go" aria-hidden="true">→</span></a>
-        <a class="field f-t" href="#denken"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span><div><b>Denken mit dem Stift</b><span>Workshops, visuelle Moderation, Prozesse</span></div><span class="go" aria-hidden="true">→</span></a>
+        <a class="field f-t" href="#denken"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span><div><b>Denken mit dem Stift</b><span>Visuelle Moderation, Prozesse</span></div><span class="go" aria-hidden="true">→</span></a>
       </nav>
       <div class="proof">
         <span><b>Kantorin</b> im Ev.-luth. Kirchenkreis Bremerhaven</span>
@@ -375,14 +375,13 @@ details p{margin-top:8px;max-width:75ch}
         </div>
         <div class="formats">
           <div><b>Impuls</b><span>Kurzformat für Teamsitzung oder Fachtag</span></div>
-          <div><b>Workshop</b><span>Halber oder ganzer Tag, vor Ort oder online</span></div>
           <div><b>Visuelle Moderation</b><span>Ich moderiere eure Sitzung oder Klausur mit dem Stift</span></div>
           <div><b>Prozessbegleitung</b><span>Über mehrere Termine, vom Ziel bis zur Entscheidung</span></div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-          <p style="color:var(--ink-soft)">Für Teams und Führungskräfte, Bildungseinrichtungen, Kirchen, Vereine und soziale Organisationen. Und für Einzelpersonen, die es selbst lernen wollen.</p>
-          <a class="btn primary" href="#anfragen" data-pick="Workshop „Denken mit dem Stift“">Workshop anfragen</a>
-          <a class="btn" href="#anfragen" data-pick="Für mich persönlich (Kurs, Einzeltermin)">Für mich persönlich</a>
+          <p style="color:var(--ink-soft)">Für Teams und Führungskräfte, Bildungseinrichtungen, Kirchen, Vereine und soziale Organisationen.</p>
+          <a class="btn primary" href="#anfragen" data-pick="Visuelle Moderation / Prozessbegleitung">Moderation anfragen</a>
+          <a class="btn" href="https://vivimalt.de" target="_blank" rel="noopener">Workshops &amp; ArtNights → vivimalt.de</a>
         </div>
       </div>
     </div>
@@ -435,7 +434,7 @@ details p{margin-top:8px;max-width:75ch}
         <div class="kicker">Vivian buchen</div>
         <h2>Projekt anfragen</h2>
         <p class="intro">Erzähl mir kurz, worum es geht. Du bekommst ein individuelles Angebot. Eine Anfrage ist noch keine Buchung und verpflichtet zu nichts.</p>
-        <div class="privat"><b>Auch für Einzelpersonen.</b> Du möchtest selbst mit dem Stift denken lernen, Sketchnotes für deinen Beruf nutzen oder eine Einzelstunde? Wähl im Formular „Für mich persönlich“.</div>
+        <div class="privat"><b>Workshops &amp; ArtNights?</b> Mitmach-Angebote, ArtNights und Sketchnote-Kurse findest du bei <a href="https://vivimalt.de" target="_blank" rel="noopener">vivimalt.de</a>.</div>
         <div class="contact-row"><span class="lbl">E-Mail</span><b>kontakt@vivianglade.de</b><button class="copy" type="button" data-copy="kontakt@vivianglade.de">Kopieren</button></div>
         <div class="contact-row"><span class="lbl">Telefon &amp; WhatsApp</span><b>+49 1522 7153259</b><button class="copy" type="button" data-copy="+49 1522 7153259">Kopieren</button></div>
       </div>
@@ -444,9 +443,8 @@ details p{margin-top:8px;max-width:75ch}
           <legend>Worum geht es?</legend>
           <div class="choices">
             <label><input type="radio" name="art" id="art-musik" value="Musikprojekt"><i style="background:var(--lav)"></i>Musikprojekt anfragen</label>
-            <label><input type="radio" name="art" id="art-visuell" value="Graphic Recording / visuelle Geschichte" checked><i style="background:var(--sun)"></i>Graphic Recording / visuelle Geschichte anfragen</label>
-            <label><input type="radio" name="art" id="art-denken" value="Workshop „Denken mit dem Stift“"><i style="background:var(--sky)"></i>Workshop „Denken mit dem Stift“ anfragen</label>
-            <label><input type="radio" name="art" id="art-privat" value="Für mich persönlich (Kurs, Einzeltermin)"><i style="background:var(--ink)"></i>Für mich persönlich: Kurs oder Einzeltermin</label>
+            <label><input type="radio" name="art" id="art-visuell" value="Graphic Recording / visuelle Geschichte" checked><i style="background:var(--navy)"></i>Graphic Recording / visuelle Geschichte anfragen</label>
+            <label><input type="radio" name="art" id="art-denken" value="Visuelle Moderation / Prozessbegleitung"><i style="background:var(--sky)"></i>Visuelle Moderation / Prozessbegleitung anfragen</label>
           </div>
         </fieldset>
         <div class="row2">
