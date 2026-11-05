@@ -58,8 +58,9 @@ a{color:inherit}
 .licht::after{width:560px;height:460px;right:-200px;top:120px;background:radial-gradient(circle,var(--sky-wash),transparent 70%)}
 
 /* 1 · Ankommen */
-.ankommen{display:grid;gap:40px;align-items:center;padding-block:48px 72px}
-@media (min-width:880px){.ankommen{grid-template-columns:1.05fr .95fr;gap:64px;padding-block:72px 110px}}
+.ankommen{display:grid;gap:28px;align-items:start;padding-block:8px 72px}
+.ankommen .zeichnung{order:-1;max-width:300px}
+@media (min-width:880px){.ankommen{grid-template-columns:1.05fr .95fr;gap:64px;padding-block:16px 110px}.ankommen .zeichnung{order:0;max-width:440px}.ankommen>div{padding-top:72px}}
 .ankommen h1{font:400 clamp(2.3rem,6vw,4rem)/1.08 var(--serif);margin:0;letter-spacing:-.01em}
 .ankommen h1 em{font-style:italic;color:var(--payne)}
 .ankommen .unter{font-size:1.15rem;color:var(--soft);max-width:34ch;margin:26px 0 0}
